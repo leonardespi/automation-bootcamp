@@ -1,3 +1,8 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
 # Module 7 — Debugging & Deflaking
 
 **Symptoms of flakiness:** timeouts, stale elements, order dependence.

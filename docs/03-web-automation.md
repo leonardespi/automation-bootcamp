@@ -1,3 +1,8 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
 # Module 3 — Web Automation with Selenium
 
 **Key concepts:**

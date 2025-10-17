@@ -1,3 +1,8 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
 # Module 2 — Python Basics for Testers
 
 **Topics:**

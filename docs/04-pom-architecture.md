@@ -1,3 +1,8 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
 # Module 4 — Page Object Model (POM)
 
 **Why POM?** Separation of concerns, maintainability, reuse.

@@ -1,3 +1,8 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
 # Module 5 — Assertions & Reporting
 
 **Assertions:** clear failure messages, negative cases, boundary checks.

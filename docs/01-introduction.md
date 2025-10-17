@@ -1,3 +1,8 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
 # Module 1 — Introduction
 
 Welcome to your very first step in the world of **test automation**!

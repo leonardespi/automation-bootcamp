@@ -1,3 +1,8 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
 # Module 8 — Capstone
 
 Design and implement a small E2E suite using POM + CI + reporting.
