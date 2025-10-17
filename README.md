@@ -14,7 +14,7 @@ You might also wanna check the demo website you'll use for testing: [here](http:
 - Capstone: design a small, maintainable E2E suite with CI + reports
 
 ## Quickstart (GitHub Codespaces)
-1. First of all, fork this repo into your gh account with this link: [fork me](https://github.com/leonardespi/qa-automation-bootcamp/fork)
+1. First of all, fork this repo into your gh account with this link → [Fork me](https://github.com/leonardespi/qa-automation-bootcamp/fork)
 2. **Open the course guide here** → [Open me](https://www.leonardespi.me/qa-automation-bootcamp/)
 3. Follow the course!!
 
