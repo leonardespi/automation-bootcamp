@@ -5,6 +5,8 @@
 </style>
 # QA Automation Bootcamp: From Zero to Automation Hero\!
 
+- Return to github → [Here](https://github.com/leonardespi/qa-automation-bootcamp)
+
 Hello and a **massive welcome** to the QA Automation Bootcamp\! I am so, so excited that you're here. Seriously\! Taking this step is like deciding you're not just going to read books anymore; you're going to learn how to write them. You're about to **unlock a superpower** that will ***transform your career***, and I'm thrilled to be your guide on this adventure.
 
 If you've been working as a **manual or functional tester**, you're already a hero of the software world. You're the *guardian of quality*, the *champion of the user*, the one who meticulously checks every nook and cranny to make sure things work as they should. You have an incredible eye for detail and a deep understanding of what makes a product great. But let's be honest, sometimes the work can feel a bit... **repetitive**, right? Clicking the same buttons, filling out the same forms, running through the same checklists day in and day out. It’s like being a world-class chef who only ever gets to chop vegetables. You know you're **capable of so much more**\!
