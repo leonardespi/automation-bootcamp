@@ -122,7 +122,7 @@ In this part, we’ll walk through setting up your automation environment in a *
 
 Think of a Codespace as a **ready-to-cook meal kit**: all the ingredients pre-measured, tools laid out, and instructions clear.
 
-In your repository, click **“Code → Open with Codespaces → New Codespace”**.
+In your repository, click **“Code → Codespaces → New Codespace”**.
 GitHub will spin up a Linux-based environment in the cloud—with VS Code, terminal, and Python ready.
 
 ---

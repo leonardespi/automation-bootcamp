@@ -2,6 +2,8 @@
 
 A modular, hands-on upskilling course that takes functional/manual testers from **zero automation** to **Junior Automation Engineer** level using Python, Selenium, and Page Object Model (POM).
 
+You might also wanna check the demo website you'll use for testing: [here](http://www.leonardespi.me/automation-testers-handbook-demo/)
+
 ## What you'll learn
 - Python fundamentals for testing
 - Web automation with Selenium (Chrome headless)
@@ -12,11 +14,9 @@ A modular, hands-on upskilling course that takes functional/manual testers from 
 - Capstone: design a small, maintainable E2E suite with CI + reports
 
 ## Quickstart (GitHub Codespaces)
-1. **Open in Codespaces** → This repo includes a `.devcontainer` configured with Python and dev tools.
-2. `pip install -r requirements.txt`
-3. Run smoke tests: `pytest -q`
-4. Generate Allure report locally (optional): `pytest --alluredir=reports/allure`
-   - Then `allure serve reports/allure` (requires Allure locally; optional in Codespaces).
+1. First of all, fork this repo into your gh account with this link: [fork me](https://github.com/leonardespi/qa-automation-bootcamp/fork)
+2. **Open the course guide here** → [Open me](https://www.leonardespi.me/qa-automation-bootcamp/)
+3. Follow the course!!
 
 ## Local Dev (outside Codespaces)
 - Python 3.11+ recommended.
