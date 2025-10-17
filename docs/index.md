@@ -1,14 +1,3 @@
-
-## Modules
-- [Module 1](01-introduction.html)
-- [Module 2](02-python-basics.html)
-- [Module 3](03-web-automation.html)
-- [Module 4](04-pom-architecture.html)
-- [Module 5](05-assertions-reporting.html)
-- [Module 6](06-ci-integration.html)
-- [Module 7](07-debugging.html)
-- [Module 8](08-capstone-project.html)
-
 # QA Automation Bootcamp: From Zero to Automation Hero\!
 
 Hello and a massive welcome to the QA Automation Bootcamp\! I am so, so excited that you're here. Seriously\! Taking this step is like deciding you're not just going to read books anymore; you're going to learn how to write them. You're about to unlock a superpower that will transform your career, and I'm thrilled to be your guide on this adventure.
