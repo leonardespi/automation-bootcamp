@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.vscode/
+.idea/
+*.pyc
+.DS_Store
+reports/
+!reports/.gitkeep
+.env
+.venv
+.python-version
+.mypy_cache/
