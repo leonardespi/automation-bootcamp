@@ -110,103 +110,7 @@ That’s why we integrate tools like **Allure**—they transform dry test output
 
 ---
 
-## 3. The Toolbelt of a Modern QA Automator
-
-Let’s meet your squad of digital heroes.
-
-Each tool plays a distinct role in your journey. Think of them as instruments in an orchestra—alone they make noise, together they make music.
-
----
-
-### Python — “The Swiss Army Knife”
-
-Many languages can perform this task, there it is *Ruby, Java, Javascript*, and yet *Python* is simple, elegant, and perfect for testing.
-It reads like English (“assert login_button.is_displayed()”), making it beginner-friendly yet powerful enough for enterprise frameworks.
-
-If programming feels intimidating, think of Python as Lego blocks. You don’t need to carve new pieces—you just learn how to **snap them together** in clever ways.
-
----
-
-### Pytest — “The Conductor”
-
-Again, there are many frameworks out there, *slash*, *behave*, but if we are talking in pythonic terms, we are most likely also talking about Pytest, your **test runner**, and your conductor in the automation orchestra.
-It:
-
-* Collects test functions automatically.
-* Executes them with structure.
-* Reports results cleanly.
-
-But Pytest is more than “run tests” — it’s an **ecosystem**:
-
-* **Fixtures** manage setup/cleanup (like laying the table and washing dishes).
-* **Marks** organize or parametrize tests.
-* **Plugins** extend power (coverage, reruns, parallelism).
-
-When you type:
-
-```bash
-pytest -q
-```
-
-you’re basically saying, “Hey Pytest, go through my script, find all test cases, and tell me what works and what doesn’t—quietly.”
-
----
-
-### Selenium — “The Invisible Finger”
-
-If your app’s interface were a puppet stage, Selenium would be the hand controlling the strings.
-
-Selenium lets your code:
-
-* Open browsers (Chrome, Firefox, Edge).
-* Click buttons, fill inputs, read text, handle pop-ups.
-* Simulate user journeys, like logging in or submitting forms.
-
-Think of Selenium as a **remote control** for browsers.
-Instead of watching the screen, you teach your code to “see” through locators (CSS selectors, XPath, IDs) and act accordingly.
-
-We’ll explore strategies like:
-
-* Using **explicit waits** (patient automation).
-* Avoiding **hard sleeps** (lazy automation).
-* Writing **locator-resilient** code (robust automation).
-
----
-
-### Allure — “The Storyteller”
-
-Allure turns test execution into storytelling.
-It creates rich HTML reports that show:
-
-* Which tests ran.
-* What passed or failed.
-* Screenshots, logs, and attachments.
-
-A good Allure report feels like reading a detective’s case file: timestamped evidence, breadcrumb trails, and highlights of what went wrong.
-
-Automation without reporting is like doing science without publishing results.
-
----
-
-### GitHub Actions — “The Automation Butler”
-
-Finally, we meet GitHub Actions—your CI/CD sidekick.
-
-It’s what makes your tests run **without you even pressing play**.
-Every time you push code, Actions can:
-
-* Set up environments.
-* Install dependencies.
-* Run tests.
-* Generate reports.
-
-It’s like having a polite assistant who checks your work before you merge it into the main branch.
-
-This, my friend, is the seed of **Continuous Integration**—the heartbeat of every modern engineering team.
-
----
-
-## 4. Your First Practical Setup
+## 3. Your First Practical Setup
 
 Enough theory—let’s get our hands moving!
 
@@ -297,7 +201,7 @@ This is the automation equivalent of a **heartbeat**—your first verification t
 
 ---
 
-## 5. Anatomy of an Automation Project
+## 4. Anatomy of an Automation Project
 
 Before you move on, let’s understand how a project like this is organized.
 
@@ -363,7 +267,7 @@ Your guidebook. Always keep it updated! It’s the first impression any collabor
 
 ---
 
-## 6. Your Automation Journey Map
+## 5. Your Automation Journey Map
 
 Think of this entire course as a **mountain hike**.
 
@@ -381,7 +285,7 @@ This first climb is gentle—but it’s where your stamina and discipline form.
 
 ---
 
-## 7. Mindset Over Mechanics
+## 6. Mindset Over Mechanics
 
 Here’s a truth most tutorials skip:
 The hardest part of learning automation isn’t syntax—it’s **thinking like an engineer**.
@@ -406,7 +310,7 @@ Each debug session strengthens your intuition.
 
 ---
 
-## 8. Reliability and Ethics
+## 7. Reliability and Ethics
 
 As you gain automation power, remember the **responsibility** that comes with it.
 
@@ -425,32 +329,32 @@ In short: **build like a craftsman, test like a scientist, think like a guardian
 
 ---
 
-## 9. Common Beginner Pitfalls
+## 8. Common Beginner Pitfalls
 
 Let’s save you from the most common traps.
 
-### ❌ Pitfall 1: Copy-Pasting Without Understanding
+### Pitfall 1: Copy-Pasting Without Understanding
 
 Automation is *not* a recipe to memorize. It’s a discipline to internalize.
 Each command you write tells the browser a story—make sure you understand the plot.
 
 ---
 
-### ❌ Pitfall 2: Ignoring Waits
+### Pitfall 2: Ignoring Waits
 
 Web pages are alive—they load asynchronously.
 If you click too soon, your script fails. Learn to use **WebDriverWait** wisely.
 
 ---
 
-### ❌ Pitfall 3: Hardcoding Paths or Data
+### Pitfall 3: Hardcoding Paths or Data
 
 If your test only works on your machine, it’s not automation—it’s a demo.
 Always write code that runs anywhere.
 
 ---
 
-### ❌ Pitfall 4: Testing Too Much Too Soon
+### Pitfall 4: Testing Too Much Too Soon
 
 Don’t automate everything from day one.
 Start with **smoke tests**—the ones that validate core flows.
@@ -460,7 +364,7 @@ Automation is like weightlifting—progressive overload, not brute force.
 
 ---
 
-## 10. What’s Next?
+## 9. What’s Next?
 
 At this stage, you’ve learned:
 
@@ -480,7 +384,7 @@ You’ll write scripts that don’t just run—they *explain themselves.*
 
 ---
 
-## 11. End-of-Module Checklist
+## 10. End-of-Module Checklist
 
 Before moving forward, make sure you can:
 
@@ -491,32 +395,3 @@ Before moving forward, make sure you can:
 * [ ] Commit your first test to GitHub and view the CI result in GitHub Actions.
 
 When all boxes are ticked—congratulations. You’ve crossed the threshold.
-
----
-
-## Final Thoughts
-
-Learning automation is a journey from **chaos to control**.
-
-At first, you’ll feel like your tests break for no reason, or that browsers have a secret vendetta against you.
-But soon, patterns emerge. You’ll learn to **read the matrix**—why a locator failed, why timing matters, why idempotence saves hours of debugging.
-
-Automation isn’t just about efficiency; it’s about building **reliability at scale**.
-You’re no longer clicking for answers—you’re *programming curiosity.*
-
-Remember this mantra:
-
-> “Every passing test is a promise kept.
-> Every failing test is a story waiting to be told.”
-
-So take a breath.
-Run `pytest` one more time.
-Watch that tiny green dot appear.
-That’s not just success—it’s your first proof that machines can think *with* you.
-
-Welcome to automation.
-Let’s get coding. 🚀
-
----
-
-Would you like me to continue by writing **Module 2 — Python for Test Automation (0→1)** in the same Angela Yu narrative style (covering syntax, functions, error handling, and mini exercises)? It would be a natural continuation of this syllabus.
