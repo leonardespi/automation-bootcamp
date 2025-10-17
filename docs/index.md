@@ -1,3 +1,8 @@
+<style>
+  body {
+    text-align: justify;
+  }
+</style>
 # QA Automation Bootcamp: From Zero to Automation Hero\!
 
 Hello and a **massive welcome** to the QA Automation Bootcamp\! I am so, so excited that you're here. Seriously\! Taking this step is like deciding you're not just going to read books anymore; you're going to learn how to write them. You're about to **unlock a superpower** that will ***transform your career***, and I'm thrilled to be your guide on this adventure.
