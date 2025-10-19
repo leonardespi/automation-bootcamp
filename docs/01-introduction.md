@@ -267,25 +267,7 @@ Your guidebook. Always keep it updated! It’s the first impression any collabor
 
 ---
 
-## 5. Your Automation Journey Map
-
-Think of this entire course as a **mountain hike**.
-
-In **Module 1**, we’re learning how to wear the boots, hold the map, and recognize the terrain.
-Later modules will take you deeper:
-
-* **Module 2:** Python fundamentals for automation.
-* **Module 3:** Web automation with Selenium.
-* **Module 4:** Page Object Model (POM) architecture.
-* **Module 5:** Assertions, reporting, and debugging.
-* **Module 6:** CI/CD and integration best practices.
-* **Capstone:** Build and demo your own automation suite.
-
-This first climb is gentle—but it’s where your stamina and discipline form.
-
----
-
-## 6. Mindset Over Mechanics
+## 5. Mindset Over Mechanics
 
 Here’s a truth most tutorials skip:
 The hardest part of learning automation isn’t syntax—it’s **thinking like an engineer**.
@@ -310,7 +292,7 @@ Each debug session strengthens your intuition.
 
 ---
 
-## 7. Reliability and Ethics
+## 6. Reliability and Ethics
 
 As you gain automation power, remember the **responsibility** that comes with it.
 
@@ -329,32 +311,32 @@ In short: **build like a craftsman, test like a scientist, think like a guardian
 
 ---
 
-## 8. Common Beginner Pitfalls
+## 7. Common Beginner Pitfalls
 
 Let’s save you from the most common traps.
 
-### Pitfall 1: Copy-Pasting Without Understanding
+### 1: Copy-Pasting Without Understanding
 
 Automation is *not* a recipe to memorize. It’s a discipline to internalize.
 Each command you write tells the browser a story—make sure you understand the plot.
 
 ---
 
-### Pitfall 2: Ignoring Waits
+### 2: Ignoring Waits
 
 Web pages are alive—they load asynchronously.
 If you click too soon, your script fails. Learn to use **WebDriverWait** wisely.
 
 ---
 
-### Pitfall 3: Hardcoding Paths or Data
+### 3: Hardcoding Paths or Data
 
 If your test only works on your machine, it’s not automation—it’s a demo.
 Always write code that runs anywhere.
 
 ---
 
-### Pitfall 4: Testing Too Much Too Soon
+### 4: Testing Too Much Too Soon
 
 Don’t automate everything from day one.
 Start with **smoke tests**—the ones that validate core flows.
@@ -364,7 +346,7 @@ Automation is like weightlifting—progressive overload, not brute force.
 
 ---
 
-## 9. What’s Next?
+## 8. What’s Next?
 
 At this stage, you’ve learned:
 
@@ -384,7 +366,7 @@ You’ll write scripts that don’t just run—they *explain themselves.*
 
 ---
 
-## 10. End-of-Module Checklist
+## 9. End-of-Module Checklist
 
 Before moving forward, make sure you can:
 
