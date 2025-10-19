@@ -10,3 +10,5 @@ reports/
 .venv
 .python-version
 .mypy_cache/
+
+_site
