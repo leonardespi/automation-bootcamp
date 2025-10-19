@@ -1,0 +1,20 @@
+title: "QA Automation Bootcamp"
+description: "Minimal, monochrome, monospace Jekyll site generated from your static content."
+baseurl: ""
+url: ""
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+collections:
+  modules:
+    output: true
+    permalink: /modules/:name/
+exclude:
+  - README.md
+  - Gemfile.lock
+  - node_modules
+  - vendor
+sass:
+  style: compressed
+timezone: America/Mexico_City

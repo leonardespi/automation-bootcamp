@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>02 Python Basics</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+
+  </head>
+  <body>
+    <header>
+  <div class="container">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+      <a href="/" style="font-weight:700; text-decoration:none;">QA Automation Bootcamp</a>
+      <nav aria-label="Primary">
+        <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+        &nbsp;·&nbsp;
+        <a href="/modules/" {% if page.url contains '/modules/' and page.url == '/modules/' %}aria-current="page"{% endif %}>Modules</a>
+        &nbsp;·&nbsp;
+        <a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <main class="container">
+      <article class="card">
+  <h1>02 Python Basics</h1>
+  <h1 id="module-2--python-basics-for-testers">Module 2 — Python Basics for Testers</h1>
+
+<p><strong>Topics:</strong></p>
+<ul>
+  <li>Types, functions, modules</li>
+  <li>Virtual environments and dependency management</li>
+  <li><code class="language-plaintext highlighter-rouge">assert</code> and simple property-based checks</li>
+</ul>
+
+<p><strong>Exercise:</strong> Implement small functions in <code class="language-plaintext highlighter-rouge">exercises/01-python-fundamentals/solution.py</code> and add your own unit tests.</p>
+
+</article>
+<p><a href="/modules/">← Back to Modules</a></p>
+
+    </main>
+    <footer>
+  <div class="container">
+    <small>&copy; QA Automation Bootcamp — Built 2025-10-19. <a href="http://www.leonardespi.me" target="_blank" rel="noopener noreferrer">@leonardespi</a>.</small>
+  </div>
+</footer>
+
+  </body>
+</html>
