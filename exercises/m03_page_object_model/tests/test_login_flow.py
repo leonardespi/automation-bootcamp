@@ -1,22 +1,67 @@
+import os
+from shutil import which
+import pytest
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
 from exercises.m03_page_object_model.pages.login_page import LoginPage
+
+def _detect_chrome_binary():
+    return (
+        os.environ.get("CHROME_BIN")
+        or which("chromium")
+        or which("chromium-browser")
+        or which("google-chrome")
+        or which("google-chrome-stable")
+    )
+
+
 
 @pytest.fixture
 def driver():
+    # Writable profile/cache in containers
+    user_data_dir = "/tmp/chrome-user-data"
+    cache_dir = "/tmp/chrome-cache"
+    os.makedirs(user_data_dir, exist_ok=True)
+    os.makedirs(cache_dir, exist_ok=True)
+
+    chrome_bin = _detect_chrome_binary()
+    if not chrome_bin:
+        raise RuntimeError("Chrome/Chromium binary not found. Install chromium and/or set CHROME_BIN.")
+
+    # Build flags explicitly (don’t try to mutate options.arguments)
+    flags = [
+        "--headless",                      # use legacy headless for container stability
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        "--disable-gpu",
+        "--disable-software-rasterizer",
+        "--disable-features=VizDisplayCompositor",
+        "--remote-allow-origins=*",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--window-size=1280,900",
+        f"--user-data-dir={user_data_dir}",
+        f"--disk-cache-dir={cache_dir}",
+        "--remote-debugging-port=9222",    # fixed port helps avoid DevToolsActivePort issue
+        "--single-process",                # helps on some base images
+    ]
+
     options = Options()
-    options.add_argument("--headless=new")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-    driver.set_window_size(1280, 900)
-    yield driver
-    driver.quit()
+    options.binary_location = chrome_bin
+    for f in flags:
+        options.add_argument(f)
+
+    # Selenium Manager will resolve the matching driver
+    drv = webdriver.Chrome(options=options)
+    drv.set_window_size(1280, 900)
+    yield drv
+    drv.quit()
+
+
 
 def test_login_with_pom(driver):
     page = LoginPage(driver).open().login_as("standard_user", "secret_sauce")

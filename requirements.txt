@@ -1,6 +1,5 @@
 pytest==8.3.2
-selenium==4.24.0
-webdriver-manager==4.0.2
+selenium==4.24.0,<5
 pytest-xdist==3.6.1
 allure-pytest==2.13.5
 requests==2.32.3
