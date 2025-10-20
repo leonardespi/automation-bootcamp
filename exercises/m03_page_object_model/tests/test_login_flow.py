@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from exercises.m03_page_object_model.pages.login_page import LoginPage
+from selenium.common.exceptions import WebDriverException
 
 def _detect_chrome_binary():
     return (
@@ -22,7 +23,6 @@ def _detect_chrome_binary():
 
 @pytest.fixture
 def driver():
-    # Writable profile/cache in containers
     user_data_dir = "/tmp/chrome-user-data"
     cache_dir = "/tmp/chrome-cache"
     os.makedirs(user_data_dir, exist_ok=True)
@@ -30,37 +30,50 @@ def driver():
 
     chrome_bin = _detect_chrome_binary()
     if not chrome_bin:
-        raise RuntimeError("Chrome/Chromium binary not found. Install chromium and/or set CHROME_BIN.")
-
-    # Build flags explicitly (don’t try to mutate options.arguments)
-    flags = [
-        "--headless",                      # use legacy headless for container stability
-        "--no-sandbox",
-        "--disable-dev-shm-usage",
-        "--disable-gpu",
-        "--disable-software-rasterizer",
-        "--disable-features=VizDisplayCompositor",
-        "--remote-allow-origins=*",
-        "--no-first-run",
-        "--no-default-browser-check",
-        "--window-size=1280,900",
-        f"--user-data-dir={user_data_dir}",
-        f"--disk-cache-dir={cache_dir}",
-        "--remote-debugging-port=9222",    # fixed port helps avoid DevToolsActivePort issue
-        "--single-process",                # helps on some base images
-    ]
+        raise RuntimeError(
+            "Chrome/Chromium binary not found. Install Chrome/Chromium or set CHROME_BIN."
+        )
 
     options = Options()
     options.binary_location = chrome_bin
+
+    # Minimal, stable flags for containers
+    flags = [
+        "--headless=new",              # modern headless
+        "--no-sandbox",
+        "--disable-dev-shm-usage",     # avoid small /dev/shm in containers
+        "--window-size=1280,900",      # set size via flag (not via WebDriver call)
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--disable-gpu",               # harmless in headless; keeps consistency
+        "--remote-allow-origins=*",    # workaround for some images
+        f"--user-data-dir={user_data_dir}",
+        f"--disk-cache-dir={cache_dir}",
+        "--hide-scrollbars",
+    ]
     for f in flags:
         options.add_argument(f)
 
-    # Selenium Manager will resolve the matching driver
-    drv = webdriver.Chrome(options=options)
-    drv.set_window_size(1280, 900)
-    yield drv
-    drv.quit()
+    # ⚠️ Do NOT use --single-process or --disable-features=VizDisplayCompositor in modern Chrome.
+    # ⚠️ Do NOT set a fixed --remote-debugging-port unless you must; defaults are fine.
 
+    drv = webdriver.Chrome(options=options)
+
+    # In headless, Chrome ignores window APIs; rely on --window-size instead.
+    # Only attempt set_window_size when *not* headless to avoid session crashes.
+    try:
+        is_headless = any("--headless" in a for a in options.arguments)
+        if not is_headless:
+            drv.set_window_size(1280, 900)
+    except WebDriverException:
+        # Best-effort: if something goes wrong here, continue with the session
+        pass
+
+    yield drv
+    try:
+        drv.quit()
+    except Exception:
+        pass
 
 
 def test_login_with_pom(driver):
