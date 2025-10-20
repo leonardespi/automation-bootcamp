@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
-from exercises.03-page-object-model.pages.login_page import LoginPage
+from exercises.m03_page_object_model.pages.login_page import LoginPage
 
 @pytest.fixture
 def driver():
